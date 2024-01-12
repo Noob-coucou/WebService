@@ -4,24 +4,21 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-  <!-- Configuration for Jersey Servlet -->
   <servlet>
     <servlet-name>Jersey Servlet</servlet-name>
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>com.webserver.rs</param-value>
+      <param-value>com.webserver</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
 
-  <!-- Mapping for Jersey Servlet -->
   <servlet-mapping>
     <servlet-name>Jersey Servlet</servlet-name>
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
 
-  <!-- Welcome file list -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>

@@ -18,38 +18,40 @@
   </properties>
 
   <dependencies>
-    <!-- Jersey Core -->
+    <dependency>
+      <groupId>org.glassfish.jersey.inject</groupId>
+      <artifactId>jersey-hk2</artifactId>
+      <version>2.34</version>
+    </dependency>
+
     <dependency>
       <groupId>org.glassfish.jersey.core</groupId>
       <artifactId>jersey-server</artifactId>
-      <version>2.34</version> <!-- 或者使用其他版本 -->
+      <version>2.34</version>
     </dependency>
     <dependency>
       <groupId>org.glassfish.jersey.core</groupId>
       <artifactId>jersey-client</artifactId>
-      <version>2.34</version> <!-- 或者使用其他版本 -->
+      <version>2.34</version>
     </dependency>
 
-    <!-- Jersey Common -->
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
       <artifactId>jersey-container-servlet</artifactId>
-      <version>2.34</version> <!-- 或者使用其他版本 -->
+      <version>2.34</version>
     </dependency>
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
       <artifactId>jersey-container-servlet-core</artifactId>
-      <version>2.34</version> <!-- 或者使用其他版本 -->
+      <version>2.34</version>
     </dependency>
 
-    <!-- Jersey Media Providers -->
     <dependency>
       <groupId>org.glassfish.jersey.media</groupId>
       <artifactId>jersey-media-json-jackson</artifactId>
-      <version>2.34</version> <!-- 或者使用其他版本 -->
+      <version>2.34</version>
     </dependency>
 
-    <!-- JAXB API (for Java 9+ compatibility) -->
     <dependency>
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
@@ -69,13 +71,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- JUnit -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.1</version>
-      <scope>test</scope>
-    </dependency>
+
   </dependencies>
 
   <build>

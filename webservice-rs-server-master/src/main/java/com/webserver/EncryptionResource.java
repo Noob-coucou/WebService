@@ -1,12 +1,17 @@
-package com.webserver.rs;
+package com.webserver;
 
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-public class EncryptServiceImpl implements EncryptService {
+@Path("/encryption")
+public class EncryptionResource {
 
-    @Override
+    @POST
+    @Path("/encrypt")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_PLAIN)
     public String encryptString(String input) {
         // 简单的异或运算加密
         String encryptedResult = xorEncrypt(input);
@@ -15,7 +20,10 @@ public class EncryptServiceImpl implements EncryptService {
         return Base64.getEncoder().encodeToString(encryptedResult.getBytes(StandardCharsets.UTF_8));
     }
 
-    @Override
+    @POST
+    @Path("/decrypt")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_PLAIN)
     public String decryptString(String encryptedInput) {
         // 使用Base64解码
         byte[] decodedBytes = Base64.getDecoder().decode(encryptedInput);
