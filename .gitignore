@@ -1,0 +1,33 @@
+# IntelliJ IDEA
+.idea/
+
+# Compiled bytecode
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+/out/
+
+# Dependency directories
+.idea_modules/
+target/
+bin/
+gen/
+
+# Maven
+target/
+*.iml
+.idea_modules/
+*.ipr
+*.iws
+*.log
+*.swp
+
+
+# Temporary files
+*.tmp
+*.log
+*.log.*
+*.log?
+*.swp
